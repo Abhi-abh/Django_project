@@ -8,8 +8,10 @@ from django.contrib import messages
 
 # Create your views here.
 
+
 def index(request):
     return render(request,'index.html')
+
 
 
 def booking(request):
@@ -40,11 +42,6 @@ def department(request):
     }
     return render(request,'department.html',dict_dept)
 
-
-
-@login_required(login_url='login')
-def HomePage(request):
-    return render (request,'index.html')
 
 def SignupPage(request):
     if request.method=='POST':
