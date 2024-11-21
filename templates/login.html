@@ -19,9 +19,9 @@
         <h3>Login Here</h3>
         {% csrf_token %}
         {% if messages %}
-        <div class="error">
+        <div class="messages">
             {% for message in messages %}
-                <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>
                     {{ message }}
         </p>
             {% endfor %}
@@ -40,7 +40,7 @@
           <div class="go"><i class="fab fa-google"></i>  Google</div>
           <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
         </div> -->
-        <a href="{% url 'signup' %}" >Create a account</a>
+        <a class="text-primary" href="{% url 'signup' %}" >Create a account</a>
     </form>
 </body>
 </html>
